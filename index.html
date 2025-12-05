@@ -71,30 +71,38 @@
 
     /* HERO */
     .hero {
-      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-      color: #ffffff;
-      border-radius: 16px;
-      padding: 72px 20px;
-      margin-bottom: 32px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #2DAFA8, #1F6CAB);
+  color: #ffffff;
+  border-radius: 16px;
+  padding: 96px 20px;
+  margin-bottom: 32px;
+  text-align: center;
+}
 
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.18), transparent 60%);
-      opacity: 0.9;
-      pointer-events: none;
-    }
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.15), transparent 70%),
+              radial-gradient(circle at 80% 80%, rgba(255,255,255,0.12), transparent 70%);
+  background-size: 200% 200%;
+  animation: wavesMove 10s ease-in-out infinite;
+  opacity: 0.25;
+  z-index: 0;
+}
 
-    .hero-inner {
-      position: relative;
-      max-width: 640px;
-      margin: 0 auto;
-    }
+@keyframes wavesMove {
+  0% { transform: translate(0px, 0px) scale(1); }
+  50% { transform: translate(-20px, -20px) scale(1.1); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+.hero .hero-inner {
+  position: relative;
+  z-index: 2;
+}
 
     .logo-hero {
       margin-bottom: 24px;
@@ -169,30 +177,29 @@
       margin-bottom: 16px;
       opacity: 0.9;
     }
-.service-list {
-  list-style: none;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 16px;
-  font-size: 14px;
-}
 
 .service-list li {
-  background: rgba(255, 255, 255, 0.55);
-  backdrop-filter: blur(12px);
-  border-radius: 18px;
-  padding: 20px;
-  border: 1px solid rgba(0, 150, 170, 0.25);
-  box-shadow: 0 8px 20px rgba(0, 80, 100, 0.22);
-  transition: 0.25s ease;
+  background: #E9FAFF; /* سماوي فاتح */
+  border-radius: 16px;
+  padding: 16px 18px 14px;
+  border: 1px solid rgba(0, 120, 160, 0.22);
+  box-shadow: 0 6px 18px rgba(0, 60, 90, 0.22); /* ظل غامق شيك */
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .service-list li:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 26px rgba(0, 80, 100, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(0, 60, 90, 0.33);
 }
 
-.service-list p {
+    .service-list h3 {
+  font-size: 15px;
+  margin-bottom: 4px;
+  color: #1F6CAB; /* أزرق طبي */
+  font-weight: 600;
+}
+
+    .service-list p {
   margin: 0;
   opacity: 0.9;
 }
@@ -265,7 +272,7 @@
         <h1>Shehawy Wellness Group LLC</h1>
         <p class="lede">
           Holistic wellness and preventive healthcare delivered with modern, personalized care.
-          We bring wellness, dental hygiene, IV therapy, and mobile health services directly to you in South Florida.
+          We bring wellness, oral hygiene, IV therapy, and mobile health services directly to you in South Florida.
         </p>
         <a class="cta" href="#services">Explore Our Services</a>
       </div>
@@ -281,7 +288,7 @@
         </p>
         <p>
           Our mission is to deliver convenient, high-quality care through a holistic approach that integrates wellness,
-          dental hygiene, IV hydration, and personalized health support. Whether you're focused on long-term prevention,
+          oral hygiene, IV hydration, and personalized health support. Whether you're focused on long-term prevention,
           better daily performance, or recovery after intensive activity, our services are designed around your lifestyle.
         </p>
         <p>
@@ -299,7 +306,7 @@
 
         <ul class="service-list">
           <li>
-            <h3>Mobile Dental Hygiene</h3>
+            <h3>Mobile oral Hygiene</h3>
             <p>Professional cleaning, stain removal, and preventive hygiene services coordinated with licensed providers.</p>
           </li>
           <li>
@@ -312,7 +319,7 @@
           </li>
           <li>
             <h3>Smile Design Coordination</h3>
-            <p>Digital smile design planning and coordination with trusted dental labs and clinicians.</p>
+            <p>Advanced digital smile design solutions delivered in partnership with dental practices and trusted cosmetic labs.</p>
           </li>
           <li>
             <h3>Athlete & Team Support</h3>
