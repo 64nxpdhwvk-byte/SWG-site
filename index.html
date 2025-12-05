@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shehawy Wellness Group LLC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Shehawy Wellness Group LLC – mobile wellness and preventive healthcare services in Coral Springs, FL."
+  />
+
+  <style>
+    :root {
+      --primary: #2dafa8;
+      --primary-dark: #24958e;
+      --secondary: #1f6cab;
+      --bg: #f5fbfa;
+      --text: #1a1a1a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .page-wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .brand {
+      font-weight: 600;
+      font-size: 18px;
+      color: var(--secondary);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 16px;
+      font-size: 14px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      opacity: 0.8;
+    }
+
+    nav a:hover {
+      opacity: 1;
+      color: var(--secondary);
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: #ffffff;
+      border-radius: 16px;
+      padding: 72px 20px;
+      margin-bottom: 32px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.18), transparent 60%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .logo-hero {
+      margin-bottom: 24px;
+    }
+
+    .logo-hero img {
+      width: 160px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.25));
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 11px;
+      opacity: 0.9;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    .hero .lede {
+      font-size: 15px;
+      max-width: 520px;
+      margin: 0 auto 20px;
+      opacity: 0.96;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 10px 20px;
+      border-radius: 999px;
+      background: #ffffff;
+      color: var(--primary-dark);
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+    }
+
+    .cta:hover {
+      background: #f0fbfa;
+      color: var(--secondary);
+    }
+
+    main section {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 24px 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 32px rgba(15, 23, 42, 0.06);
+    }
+
+    main h2 {
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: var(--secondary);
+    }
+
+    .lede {
+      font-size: 14px;
+      margin-bottom: 16px;
+      opacity: 0.9;
+    }
+
+    .service-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 16px;
+      font-size: 14px;
+    }
+
+    .service-list h3 {
+      font-size: 15px;
+      margin-bottom: 4px;
+      color: var(--primary-dark);
+    }
+
+    .contact-list {
+      list-style: none;
+      margin: 12px 0 16px;
+      font-size: 14px;
+    }
+
+    .contact-list li + li {
+      margin-top: 4px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 12px;
+      margin-top: 24px;
+      color: #6b7280;
+    }
+
+    footer a {
+      color: var(--secondary);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (min-width: 720px) {
+      h1 {
+        font-size: 32px;
+      }
+      .hero {
+        padding: 96px 40px;
+      }
+      .page-wrapper {
+        padding: 32px 16px 48px;
+      }
+      .service-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <header>
+      <div class="brand">Shehawy Wellness Group LLC</div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO / HOME -->
+    <section id="home" class="hero">
+      <div class="hero-inner">
+        <div class="logo-hero">
+          <img src="logo.png" alt="Shehawy Wellness Group logo" />
+        </div>
+        <p class="eyebrow">Welcome to</p>
+        <h1>Shehawy Wellness Group LLC</h1>
+        <p class="lede">
+          Holistic wellness and preventive healthcare delivered with modern, personalized care.
+          We bring wellness, dental hygiene, IV therapy, and mobile health services directly to you in South Florida.
+        </p>
+        <a class="cta" href="#services">Explore Our Services</a>
+      </div>
+    </section>
+
+    <main>
+      <!-- ABOUT -->
+      <section id="about">
+        <h2>About Shehawy Wellness Group LLC</h2>
+        <p class="lede">
+          Shehawy Wellness Group LLC is a Florida-based mobile wellness and preventive healthcare company dedicated to
+          bringing modern, personalized services directly to you.
+        </p>
+        <p>
+          Our mission is to deliver convenient, high-quality care through a holistic approach that integrates wellness,
+          dental hygiene, IV hydration, and personalized health support. Whether you're focused on long-term prevention,
+          better daily performance, or recovery after intensive activity, our services are designed around your lifestyle.
+        </p>
+        <p>
+          We coordinate with trusted medical and dental professionals and follow safe, evidence-based protocols so that
+          your wellness experience feels both premium and clinically grounded.
+        </p>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services">
+        <h2>Our Services</h2>
+        <p class="lede">
+          We offer flexible, mobile-friendly services designed to fit busy lives while keeping health and wellness at the center.
+        </p>
+
+        <ul class="service-list">
+          <li>
+            <h3>Mobile Dental Hygiene</h3>
+            <p>Professional cleaning, stain removal, and preventive hygiene services coordinated with licensed providers.</p>
+          </li>
+          <li>
+            <h3>IV Hydration & Vitamin Therapy</h3>
+            <p>Wellness-focused IV drips and vitamin support aimed at recovery, energy, and overall well-being.</p>
+          </li>
+          <li>
+            <h3>Home & On-Site Wellness Visits</h3>
+            <p>Convenient in-home or on-location wellness visits for individuals, families, and small groups.</p>
+          </li>
+          <li>
+            <h3>Smile Design Coordination</h3>
+            <p>Digital smile design planning and coordination with trusted dental labs and clinicians.</p>
+          </li>
+          <li>
+            <h3>Athlete & Team Support</h3>
+            <p>Recovery-focused support tailored for athletes and active individuals.</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <p class="lede">
+          Have a question or want to schedule a wellness visit? We're here to help.
+        </p>
+        <p>
+          Reach out using any of the options below and a team member will get back to you shortly.
+        </p>
+
+        <ul class="contact-list">
+          <li><strong>Email:</strong> info@sh-wellness.org</li>
+          <li><strong>Phone / WhatsApp:</strong> +1 (646) 731-0971</li>
+          <li><strong>Location:</strong> 5944 Coral Ridge Dr, Coral Springs, FL 33076, USA</li>
+        </ul>
+
+        <a class="cta" href="mailto:info@sh-wellness.org">Send us an email</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Shehawy Wellness Group LLC — All Rights Reserved.</p>
+      <p>5944 Coral Ridge Dr, Coral Springs, FL 33076, USA</p>
+      <p>
+        <a href="mailto:info@sh-wellness.org">info@sh-wellness.org</a> |
+        +1 (646) 731-0971
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
