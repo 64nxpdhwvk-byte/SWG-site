@@ -178,17 +178,21 @@
 }
 
 .service-list li {
-  background: #ffffff;
-  border-radius: 14px;
-  padding: 14px 14px 12px;
-  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
-  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: #E9FAFF; /* سماوي فاتح */
+  border-radius: 16px;
+  padding: 16px 18px 14px;
+  border: 1px solid rgba(0, 120, 160, 0.22);
+  
+  /* ظل غامق أنيق */
+  box-shadow: 0 6px 18px rgba(0, 60, 90, 0.22);
+
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.service-list h3 {
-  font-size: 15px;
-  margin-bottom: 4px;
-  color: var(--primary-dark);
+/* تأثير عند المرور */
+.service-list li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(0, 60, 90, 0.33);
 }
 
 .service-list p {
