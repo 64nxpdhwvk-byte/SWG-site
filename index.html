@@ -79,8 +79,10 @@
   padding: 96px 20px;
   margin-bottom: 32px;
   text-align: center;
+  z-index: 1;
 }
 
+/* الخلفية المتحركة */
 .hero::before {
   content: "";
   position: absolute;
@@ -101,7 +103,7 @@
 
 .hero .hero-inner {
   position: relative;
-  z-index: 2;
+  z-index: 2; /* يجعل اللوجو والنص أمام الخلفية */
 }
 
     .logo-hero {
@@ -187,7 +189,15 @@
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.service-list li:hover {
+    .service-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* صفّين جنب بعض */
+  gap: 16px;
+  font-size: 14px;
+}
+
+    .service-list li:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 26px rgba(0, 60, 90, 0.33);
 }
