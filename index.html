@@ -165,20 +165,33 @@
       margin-bottom: 16px;
       opacity: 0.9;
     }
+.service-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+  font-size: 14px;
+}
 
-    .service-list {
-      list-style: none;
-      display: grid;
-      grid-template-columns: minmax(0, 1fr);
-      gap: 16px;
-      font-size: 14px;
-    }
+.service-list li {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 14px 14px 12px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
 
-    .service-list h3 {
-      font-size: 15px;
-      margin-bottom: 4px;
-      color: var(--primary-dark);
-    }
+.service-list h3 {
+  font-size: 15px;
+  margin-bottom: 4px;
+  color: var(--primary-dark);
+}
+
+.service-list p {
+  margin: 0;
+  opacity: 0.9;
+}
+    
 
     .contact-list {
       list-style: none;
